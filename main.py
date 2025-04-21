@@ -20,10 +20,10 @@ def print_dice_probability_table(n, s):
         writer.writerow(["number of sides: " + str(s)])
         for nd in range(1, n + 1):
             writer.writerow(["number of dice: " + str(nd)])
-            writer.writerow(["p_pns","p"])
+            writer.writerow(["p", "p_pns"])
             for p in range(nd, nd * s + 1):
                 p_pns = probability_of_given_sum(p, nd, s)
-                writer.writerow([p_pns, p])
+                writer.writerow([p, p_pns])
 
 
 def main():
