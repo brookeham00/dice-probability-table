@@ -15,17 +15,18 @@ def probability_of_given_sum(p, n, s):
 
 def print_dice_probability_table(n, s):
     print("number of sides: " + str(s))
-    print("number of dice: " + str(n))
-    print("p_pns, p")
-    for p in range(n, n * s + 1):
-        p_pns = probability_of_given_sum(p, n, s)
-        print(str(p_pns) + ", " + str(p))
+    for nd in range(1, n + 1):
+        print("\nnumber of dice: " + str(nd))
+        print("p_pns, p")
+        for p in range(nd, nd * s + 1):
+            p_pns = probability_of_given_sum(p, nd, s)
+            print(str(p_pns) + ", " + str(p))
 
 
 def main():
     print("dice probability table generator!")
     number_of_sides = 6
-    number_of_dice = 2
+    number_of_dice = 4
     print_dice_probability_table(number_of_dice, number_of_sides)
 
 if __name__ == "__main__":
