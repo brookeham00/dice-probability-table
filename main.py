@@ -14,10 +14,12 @@ def probability_of_given_sum(p, n, s):
 
 
 def print_dice_probability_table(n, s):
-    print("p_pns, p, sides, dice")
+    print("number of sides: " + str(s))
+    print("number of dice: " + str(n))
+    print("p_pns, p")
     for p in range(n, n * s + 1):
         p_pns = probability_of_given_sum(p, n, s)
-        print(str(p_pns) + ", " + str(p) + ", " + str(s) + ", " + str(n))
+        print(str(p_pns) + ", " + str(p))
 
 
 def main():
